@@ -1,5 +1,5 @@
 
-# Encriptador de Texto <img src="https://github.com/devaleon/encriptador-de-texto/blob/main/assets/Catdt.png" alt="Kitten" title="A cute kitten" width="200" height="200" />
+# Encriptador de Texto <img src="https://github.com/devaleon/encriptador-de-texto/blob/main/assets/catdt.png" alt="Cat" title="A cute kitten" width="200" height="200" />
 
 
 Encriptador de texto desarrollado como Challenge para Alura y Oracle Next Education.
