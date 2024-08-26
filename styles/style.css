@@ -17,17 +17,20 @@
 }
 
 body, html {
-    height: 100%;
+    height: auto;
     font-family: var(--fuente-inter);
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto; 
 }
 
 .marco_general {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 header {
@@ -58,12 +61,14 @@ header {
     overflow: hidden; 
 }
 
+
 .encriptador__ingreso {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
 }
+
 
 #textoIngresado {
     width: 80%;
@@ -75,6 +80,7 @@ header {
     background-color: transparent;
     color: var(--color-blue-300);
     resize: none;
+    overflow-y: auto; 
 }
 
 #textoIngresado::placeholder {
@@ -113,14 +119,16 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow-y: auto; 
 }
+
 
 #textoEncriptado {
     width: 100%;
     height: auto; 
     min-height: 50vh;
     max-height: 90vh; 
-    font-size: 1.5vw; 
+    font-size: 24px; 
     border: none;
     color: var(--color-grey-500);
     background-color: transparent;
@@ -130,6 +138,7 @@ header {
     resize: none; 
     box-sizing: border-box; 
 }
+
 
 #imagenCat {
     margin-top: 1vw;
@@ -200,3 +209,82 @@ header {
     flex-shrink: 0;
 }
 
+
+
+@media screen and (max-width: 600px) {
+    .encriptador {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .encriptador__ingreso, 
+    #textoResultado {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #textoResultado {
+        margin-top: 20px;
+    }
+
+    #textoIngresado::placeholder {
+        font-size: 4vw; 
+    }
+
+    .botton {
+        width: 80%;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    #imagenCat {
+        width: 60%; 
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .encriptador {
+        flex-direction: column;
+        align-items: center;
+        padding: 5vw;
+    }
+
+
+    .encriptador__ingreso, 
+    #textoResultado {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    #textoResultado {
+        margin-top: 20px;
+        height: 60vh; 
+    }
+
+    #textoIngresado::placeholder {
+        font-size: 5vw; 
+    }
+
+    #textoIngresado {
+        height: 40vh; 
+    }
+
+    #textoResultado {
+        height: 60vh; 
+
+    }
+
+    .botton {
+        width: 90%;
+        height: 45px;
+        font-size: 12px;
+    }
+
+
+    #imagenCat {
+        width: 40%; 
+        margin-top: 5px;
+    }
+}
