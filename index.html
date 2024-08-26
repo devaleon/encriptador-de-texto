@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="marco_general">
+        <header>       
+            <img src="/assets/Logo.png" alt="Logo de Alura" id="alura__logo">           
+        </header>
+
+        <main class="encriptador">
+
+            <div class="encriptador__ingreso">
+                <textarea id="textoIngresado" name="texto" placeholder="Ingrese el texto aquí..."></textarea>
+                <p class="texto__alerta"> 
+                    <span class="bi bi-exclamation-circle-fill"></span>
+                    Solo letras minúsculas y sin acento.
+                </p>
+                <div class="button-group">
+                    <button class="botton botton-encriptar" onclick="encriptar();">Encriptar</button>
+                    <button class="botton botton-desencriptar" onclick="desencriptar();">Desencriptar</button>
+                </div>
+            </div>
+            <div id="textoResultado">
+                <img id="imagenCat" src="/assets/Catdt.png" alt="Caricatura de una gato mirando por una lupa">
+                <div id="placeholderMessage" class="descifrado__texto">
+                    <strong class="titulo-destaque">Ningún mensaje fue encontrado</strong><br>
+                    Ingresa el texto que deseas encriptar o desencriptar.
+                </div>
+                <textarea id="textoEncriptado" name="texto" readonly></textarea>
+                <button id="botonCopiar" class="botton" type="button" onclick="copyToClipboard();">Copiar</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>                Copyright ©2024 | Desarrollado por Alejandra Leon con ♥ para Alura Latam + Oracle One
+            </p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
